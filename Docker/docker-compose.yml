@@ -1,0 +1,36 @@
+version: "2.4"
+services:
+  todo:
+    image: app-todo:2.0
+    container_name: todo
+    depends_on:
+      - db
+    ports:
+      - 8080:8080
+    links:
+      - db
+
+  proxy:
+    image: proxy-todo:1.0
+    container_name: proxy
+    depends_on:
+      - todo
+    ports:
+      - 80:80
+    links:
+      - todo
+
+  db:
+    image: postgres:14.1-alpine
+    container_name: db
+    environment:
+      POSTGRES_DB: "todo"
+      POSTGRES_USER: "todo_user"
+      POSTGRES_PASSWORD: "actpro-123"
+    ports:
+      - '5432:5432'
+    volumes: 
+      - db:/var/lib/postgresql/data
+volumes:
+  db:
+    driver: local
