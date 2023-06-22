@@ -164,8 +164,7 @@ resource "aws_security_group" "actpro-back-end-sg" {
 }
 
 resource "aws_instance" "k8-worker1" {
-  #ami           = data.aws_ami.ubuntu-latest.id
-  ami           = "ami-037d0df5a05f664f2" #Пока тренировались вышел новый образ ami, поэтому прописываем жестко
+  ami           = data.aws_ami.ubuntu-latest.id
   instance_type = "t2.micro"
   subnet_id = aws_subnet.front-end-net.id
   vpc_security_group_ids = [aws_security_group.actpro-sg.id]
@@ -178,7 +177,7 @@ resource "aws_instance" "k8-worker1" {
   }
 }
 resource "aws_instance" "k8-worker2" {
-  ami           = "ami-037d0df5a05f664f2" #Пока тренировались вышел новый образ ami, поэтому прописываем жестко
+  ami           = data.aws_ami.ubuntu-latest.id
   instance_type = "t2.micro"
   subnet_id = aws_subnet.front-end-net.id
   vpc_security_group_ids = [aws_security_group.actpro-sg.id]
