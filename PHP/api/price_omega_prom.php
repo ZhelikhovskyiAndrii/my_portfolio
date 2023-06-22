@@ -2,8 +2,6 @@
 /* 
 Документация: https://jrklein.com/2021/05/04/format-numbers-and-dates-in-box-spout-excel-spreadsheets/
 
- * Скрипт для обновления прайса на проме от поставщика Омега.
- * ссылка прайс http://88.198.142.40/upload/price_prom.xlsx
 */
 require_once '/home/bitrix/www/scripts/api/omega/spout/spout-master/src/Spout/Autoloader/autoload.php';    
 require_once 'db_conn.php';
