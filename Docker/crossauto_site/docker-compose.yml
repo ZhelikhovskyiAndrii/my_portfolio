@@ -1,0 +1,17 @@
+version: '3.3'
+
+services:
+   wordpress:
+     image: wordpress:6.0.1
+     container_name: wordpress-krosauto.com.ua
+     environment:
+       WORDPRESS_DB_HOST: xx.xx.xx.xx:3306
+       WORDPRESS_DB_USER: wordpress_user
+       WORDPRESS_DB_PASSWORD: xxxxxx
+       WORDPRESS_DB_NAME: wordpressdb
+     volumes:
+       - ./wp:/var/www/html
+       - ./phpconf/conf:/opt/bitnami/php/conf
+     ports:
+       - "88:80"
+     restart: always
