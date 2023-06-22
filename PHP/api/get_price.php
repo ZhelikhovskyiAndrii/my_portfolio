@@ -1,35 +1,15 @@
 <?php
 # Документация: https://public.omega.page/swagger/ui/index
-# Ключ ZTsppsfTTsZDGQkHDKJYLmQNblT4NqNK
-#curl -H "Content-Type: application/json" -X POST "https://public.omega.page/public/api/v1.0/price/downloadPrice" -d " { "Key": "ZTsppsfTTsZDGQkHDKJYLmQNblT4NqNK", "Id": 0, }"
-#Получить список прайсов:
-#curl -H "Content-Type: application/json" -X POST "https://public.omega.page/public/api/v1.0/price/getPrices" -d " { "Key": "ZTsppsfTTsZDGQkHDKJYLmQNblT4NqNK", }"
-/*
-curl -X POST -H "Key: RQzSCdY99JgV0kMtSYx0KTcE9bdWmhai" -H "Content-Type: application/json" -d '{"Key":"RQzSCdY99JgV0kMtSYx0KTcE9bdWmhai"}' https://public.omega.page/public/api/v1.0/profile/account
-curl -X POST -H "Content-Type: application/json" -d '{"Key":"RQzSCdY99JgV0kMtSYx0KTcE9bdWmhai"}' https://public.omega.page/public/api/v1.0/profile/account
-
-/************************  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!***********************************
-curl -X POST -H "Content-Type: application/json" -d '{ "Key": "ZTsppsfTTsZDGQkHDKJYLmQNblT4NqNK"}' https://public.omega.page/public/api/v1.0/price/getPrices
-/************************  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!***********************************
-Использую прайс для сайта  {"Name":"Прайс для інтернет-магазинів за складами, формується ~60 с (Новий)","Id":24,"Status":"Default"},
-можно и этот  {"Name":"Прайс для інтернет-магазинів, формується ~60 с (Новий)","Id":19,"Status":"Default"},
-
-Возвращает описание товара:
-curl -X POST -H "Content-Type: application/json" -d '{ "Key": "ZTsppsfTTsZDGQkHDKJYLmQNblT4NqNK", "ProductIdList": [-121114] }' https://public.omega.page/public/api/v1.0/product/details
-
-curl -X POST -H "Content-Type: application/json"  -d '{ "Key": "ZTsppsfTTsZDGQkHDKJYLmQNblT4NqNK", "ProductId": -121114, "Number": 1 }' https://public.omega.page/public/api/v1.0/product/image
-
-*/
 
 function form_price()
 {
     //Ссылка для запуска формирования прайса, время ожидания 60-90 сек
-    $url = 'https://public.omega.page/public/api/v1.0/price/enqueuePrice';
+    $url = 'https://xxxxx';
     // API ключ
-    $api_key = 'ZTsppsfTTsZDGQkHDKJYLmQNblT4NqNK';
+    $api_key = 'xxxx';
     // Параметры запроса
     $params = array(
-    'Key' => 'ZTsppsfTTsZDGQkHDKJYLmQNblT4NqNK',
+    'Key' => 'xxxxx',
     'Id' => '24'
     );
 
@@ -71,13 +51,13 @@ function form_price()
 function get_price()
 {
     // URL для загрузки файла
-    $url = 'https://public.omega.page/public/api/v1.0/price/downloadPrice';
+    $url = 'https://xxxx';
     // API ключ
 
-    $api_key = 'ZTsppsfTTsZDGQkHDKJYLmQNblT4NqNK';
+    $api_key = 'xxxxxx';
     // Параметры запроса
     $params = array(
-    'Key' => 'ZTsppsfTTsZDGQkHDKJYLmQNblT4NqNK',
+    'Key' => 'xxxxxx',
     'Id' => '24'
     );
 
