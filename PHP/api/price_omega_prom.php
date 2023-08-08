@@ -3,7 +3,7 @@
 Документация: https://jrklein.com/2021/05/04/format-numbers-and-dates-in-box-spout-excel-spreadsheets/
 
 */
-require_once '/home/bitrix/www/scripts/api/omega/spout/spout-master/src/Spout/Autoloader/autoload.php';    
+require_once 'autoload.php';    
 require_once 'db_conn.php';
 
 use Box\Spout\Writer\Common\Creator\WriterEntityFactory;
