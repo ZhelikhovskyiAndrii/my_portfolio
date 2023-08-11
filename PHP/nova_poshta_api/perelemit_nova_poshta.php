@@ -1,7 +1,5 @@
 <?php
 // Скрипт позволяет по api получить суммы отправок посылок за текущий квартал и отправить сообщение в телеграмм бот
-// Документация https://developers.novaposhta.ua/view/model/a90d323c-8512-11ec-8ced-005056b2dbe1/method/a9d22b34-8512-11ec-8ced-005056b2dbe1
-// document https://www.youtube.com/watch?v=nKsJQCYHOpI&list=PLhgRAQ8BwWFbvbcVab_KKMVYpeI__qKQK&index=2
 require_once 'send_to_bot.php';
 require '../../../../vendor/autoload.php';
 use GuzzleHttp\Client;
